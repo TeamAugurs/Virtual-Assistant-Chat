@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Chat Window Styles */
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header span {
+  font-size: 16px;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  overflow-y: auto;
+  max-height: 150px;
+}
+
+.faq-section h4 {
+  margin-top: 0;
+}
+
+.faq-item {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.faq-item:hover {
+  color: #0056b3;
+}
+
+/* Chat History */
+.chat-history {
+  flex: 1;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #f1f1f1;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Message Styles */
+.user-message {
+  background-color: #daf1da;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.assistant-message {
+  background-color: #f1f1f1;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
