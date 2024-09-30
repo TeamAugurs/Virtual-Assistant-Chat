@@ -1,0 +1,68 @@
+// Users Collection
+{
+  _id: ObjectId,
+  userType: String,  // "customer" or "representative"
+  username: String,
+  email: String,
+  passwordHash: String,
+  firstName: String,
+  lastName: String,
+  createdAt: Date,
+  lastLogin: Date,
+  status: String,  // "online", "offline", "away"
+  metadata: {
+    // Additional user-specific data
+    preferences: Object,
+    tags: Array
+  }
+}
+
+// Conversations Collection
+{
+  _id: ObjectId,
+  customerId: ObjectId,  // Reference to Users collection
+  status: String,  // "active", "closed", "waiting"
+  createdAt: Date,
+  updatedAt: Date,
+  closedAt: Date,
+  metadata: {
+    source: String,  // "website", "whatsapp", etc.
+    category: String,
+    priority: Number
+  }
+}
+
+// Messages Collection
+{
+  _id: ObjectId,
+  conversationId: ObjectId,  // Reference to Conversations collection
+  senderId: ObjectId,  // Reference to Users collection
+  content: String,
+  timestamp: Date,
+  readStatus: Boolean,
+  metadata: {
+    attachments: Array,
+    sentiment: String
+  }
+}
+
+// ChatLogs Collection
+{
+  _id: ObjectId,
+  conversationId: ObjectId,  // Reference to Conversations collection
+  representativeId: ObjectId,  // Reference to Users collection
+  startTime: Date,
+  endTime: Date,
+  duration: Number,  // in seconds
+  messageCount: Number,
+  resolution: String,
+  feedback: {
+    rating: Number,
+    comments: String
+  },
+  metadata: {
+    tags: Array,
+    notes: String
+  }
+}
+
